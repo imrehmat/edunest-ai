@@ -1,0 +1,478 @@
+/* EduNest AI - Global Styles with Lisbon Design System */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: #1f2937;
+  line-height: 1.6;
+  background-color: #ffffff;
+  overflow-x: hidden;
+}
+
+/* Lisbon-Inspired Color Palette */
+:root {
+  /* Primary Blue - Tejo River */
+  --color-primary-50: #f0f4ff;
+  --color-primary-100: #e0e9ff;
+  --color-primary-200: #c2d4ff;
+  --color-primary-300: #a3bfff;
+  --color-primary-400: #7da4ff;
+  --color-primary-500: #5689ff;
+  --color-primary-600: #3d6be6;
+  --color-primary-700: #2d4fc9;
+  --color-primary-800: #2040a8;
+  --color-primary-900: #1a308f;
+
+  /* Warm Lisbon - Terracotta & Sun */
+  --color-warm-50: #fff8f0;
+  --color-warm-100: #ffe6d5;
+  --color-warm-200: #ffb88c;
+  --color-warm-300: #ff8c42;
+  --color-warm-400: #ff7a2f;
+  --color-warm-500: #ff6819;
+
+  /* Navy Accent - Historic Lisbon */
+  --color-navy-50: #f6f8fc;
+  --color-navy-100: #eef2f9;
+  --color-navy-200: #dfe7f2;
+  --color-navy-600: #5a7fa8;
+  --color-navy-700: #45638a;
+  --color-navy-800: #36506f;
+  --color-navy-900: #2b3f57;
+
+  /* Neutral Grays */
+  --color-slate-50: #f9fafb;
+  --color-slate-100: #f3f4f6;
+  --color-slate-200: #e5e7eb;
+  --color-slate-300: #d1d5db;
+  --color-slate-400: #9ca3af;
+  --color-slate-500: #6b7280;
+  --color-slate-600: #4b5563;
+  --color-slate-700: #374151;
+  --color-slate-800: #1f2937;
+  --color-slate-900: #111827;
+
+  /* Status Colors */
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
+  --color-error: #ef4444;
+  --color-info: #3b82f6;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+h2 {
+  font-size: clamp(1.75rem, 4vw, 3rem);
+}
+
+h3 {
+  font-size: clamp(1.25rem, 3vw, 1.875rem);
+}
+
+p {
+  line-height: 1.75;
+}
+
+/* Links */
+a {
+  color: var(--color-primary-600);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--color-primary-700);
+}
+
+/* Buttons */
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideRight {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scale {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(61, 107, 230, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(61, 107, 230, 0.6);
+  }
+}
+
+/* Apply animations */
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.6s ease-out;
+}
+
+.animate-slide-down {
+  animation: slideDown 0.6s ease-out;
+}
+
+.animate-slide-left {
+  animation: slideLeft 0.6s ease-out;
+}
+
+.animate-slide-right {
+  animation: slideRight 0.6s ease-out;
+}
+
+.animate-scale {
+  animation: scale 0.6s ease-out;
+}
+
+.animate-pulse {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-glow {
+  animation: glow 2s ease-in-out infinite;
+}
+
+/* Gradients - Lisbon Theme */
+.gradient-primary {
+  background: linear-gradient(135deg, #5689ff 0%, #3d6be6 100%);
+}
+
+.gradient-warm {
+  background: linear-gradient(135deg, #ff8c42 0%, #ff6819 100%);
+}
+
+.gradient-sunset {
+  background: linear-gradient(135deg, #ff8c42 0%, #5689ff 100%);
+}
+
+.gradient-ocean {
+  background: linear-gradient(135deg, #1E90FF 0%, #4169E1 100%);
+}
+
+.gradient-radial {
+  background: radial-gradient(ellipse at center, rgba(86, 137, 255, 0.1) 0%, transparent 70%);
+}
+
+/* Glass morphism effect - used for modern UI elements */
+.glass {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+/* Shadow effects */
+.shadow-soft {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.shadow-medium {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.shadow-large {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.shadow-xl {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+}
+
+/* Hover effects */
+.hover-lift {
+  transition: all 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.hover-glow {
+  transition: all 0.3s ease;
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 20px rgba(61, 107, 230, 0.5);
+}
+
+/* Responsive utilities */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
+
+  body {
+    font-size: 0.9375rem;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Print styles */
+@media print {
+  * {
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]:after {
+    content: ' (' attr(href) ')';
+  }
+}
+
+/* Scrollbar styling - Lisbon blue theme */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #5689ff;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3d6be6;
+}
+
+/* Selection color */
+::selection {
+  background-color: #5689ff;
+  color: white;
+}
+
+::-moz-selection {
+  background-color: #5689ff;
+  color: white;
+}
+
+/* Focus states for accessibility */
+:focus-visible {
+  outline: 2px solid #5689ff;
+  outline-offset: 2px;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid #5689ff;
+  outline-offset: 2px;
+}
+
+/* Responsive text sizing */
+@supports (font-size: clamp(1rem, 2vw, 2rem)) {
+  body {
+    font-size: clamp(1rem, 1.2vw, 1.125rem);
+  }
+}
+
+/* Dark mode support (future) */
+@media (prefers-color-scheme: dark) {
+  body {
+    /* Will be configured when dark mode is implemented */
+  }
+}
+
+/* Loading animation */
+.loading {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(86, 137, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #5689ff;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Lisbon-specific theme elements */
+
+/* Portuguese tile pattern for backgrounds */
+.pattern-tiles {
+  background-image: 
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 10px,
+      rgba(86, 137, 255, 0.05) 10px,
+      rgba(86, 137, 255, 0.05) 20px
+    ),
+    repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 10px,
+      rgba(255, 140, 66, 0.05) 10px,
+      rgba(255, 140, 66, 0.05) 20px
+    );
+}
+
+/* River Tejo blue accent */
+.tejo-blue {
+  color: #1E90FF;
+}
+
+.tejo-bg {
+  background-color: #1E90FF;
+}
+
+/* Warm Lisbon sun accent */
+.lisbon-warm {
+  color: #ff8c42;
+}
+
+.lisbon-warm-bg {
+  background-color: #ff8c42;
+}
+
+/* Historic Lisbon navy */
+.lisbon-navy {
+  color: #45638a;
+}
+
+.lisbon-navy-bg {
+  background-color: #45638a;
+}
