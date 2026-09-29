@@ -319,7 +319,7 @@ npm run test:e2e
 | `npm run format` | Format code with Prettier |
 | `npm run db:push` | Push schema to Supabase |
 | `npm run db:pull` | Pull schema from Supabase |
-
+ 
 ---
 
 ## 🌐 Deployment
